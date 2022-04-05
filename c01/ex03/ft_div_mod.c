@@ -1,41 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_comb.c                                    :+:      :+:    :+:   */
+/*   ft_div_mod.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: erhenriq <erhenriq@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/04 06:30:59 by erhenriq          #+#    #+#             */
-/*   Updated: 2022/04/04 17:41:25 by erhenriq         ###   ########.fr       */
+/*   Created: 2022/04/05 20:19:15 by erhenriq          #+#    #+#             */
+/*   Updated: 2022/04/05 21:42:07 by erhenriq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_print_comb(void)
+void	ft_div_mod(int a, int b, int *div, int *mod)
 {
-	int	i;
-	int	j;
-	int	k;
+	int	numerator;
+	int	denumerator;
+	int	*quotient;
+	int	*remainder;
 
-	i = 48;
-	while (i <= 55)
-	{
-		j = i + 1;
-		while (j <= 56)
-		{
-			k = j + 1;
-			while (k <= 57)
-			{
-				write(1, &i, 1);
-				write(1, &j, 1);
-				write(1, &k, 1);
-				if (i != 55)
-					write(1, ", ", 2);
-				k++;
-			}
-			j++;
-		}
-		i++;
-	}
+	numerator = a;
+	denumerator = b;
+	quotient = div;
+	remainder = mod;
+	*quotient = numerator / denumerator;
+	*remainder = numerator % denumerator;
 }

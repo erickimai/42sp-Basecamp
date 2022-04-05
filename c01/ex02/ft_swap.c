@@ -1,41 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_comb.c                                    :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: erhenriq <erhenriq@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/04 06:30:59 by erhenriq          #+#    #+#             */
-/*   Updated: 2022/04/04 17:41:25 by erhenriq         ###   ########.fr       */
+/*   Created: 2022/04/05 16:00:11 by erhenriq          #+#    #+#             */
+/*   Updated: 2022/04/05 16:40:32 by erhenriq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_print_comb(void)
+void	ft_swap(int	*a,	int*b)
 {
-	int	i;
-	int	j;
-	int	k;
+	int	*frst_addrs;
+	int	*sec_addrs;
+	int	temp;
 
-	i = 48;
-	while (i <= 55)
-	{
-		j = i + 1;
-		while (j <= 56)
-		{
-			k = j + 1;
-			while (k <= 57)
-			{
-				write(1, &i, 1);
-				write(1, &j, 1);
-				write(1, &k, 1);
-				if (i != 55)
-					write(1, ", ", 2);
-				k++;
-			}
-			j++;
-		}
-		i++;
-	}
+	frst_addrs = a;
+	sec_addrs = b;
+	temp = *frst_addrs;
+	*frst_addrs = *sec_addrs;
+	*sec_addrs = temp;
 }

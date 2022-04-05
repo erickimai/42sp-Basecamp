@@ -1,41 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_comb.c                                    :+:      :+:    :+:   */
+/*   ft_ultimate_ft.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: erhenriq <erhenriq@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/04 06:30:59 by erhenriq          #+#    #+#             */
-/*   Updated: 2022/04/04 17:41:25 by erhenriq         ###   ########.fr       */
+/*   Created: 2022/04/05 04:29:13 by erhenriq          #+#    #+#             */
+/*   Updated: 2022/04/05 04:52:34 by erhenriq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_print_comb(void)
+void	ft_ultimate_ft(int *********nbr)
 {
-	int	i;
-	int	j;
-	int	k;
+	int	*p;
 
-	i = 48;
-	while (i <= 55)
-	{
-		j = i + 1;
-		while (j <= 56)
-		{
-			k = j + 1;
-			while (k <= 57)
-			{
-				write(1, &i, 1);
-				write(1, &j, 1);
-				write(1, &k, 1);
-				if (i != 55)
-					write(1, ", ", 2);
-				k++;
-			}
-			j++;
-		}
-		i++;
-	}
+	p = &*********nbr;
+	*p = 42;
 }
