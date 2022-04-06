@@ -1,26 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_div_mod.c                                       :+:      :+:    :+:   */
+/*   ft_ultimate_div_mod.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: erhenriq <erhenriq@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/05 20:19:15 by erhenriq          #+#    #+#             */
-/*   Updated: 2022/04/05 22:43:20 by erhenriq         ###   ########.fr       */
+/*   Created: 2022/04/05 22:27:08 by erhenriq          #+#    #+#             */
+/*   Updated: 2022/04/05 22:45:37 by erhenriq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_div_mod(int a, int b, int *div, int *mod)
+void	ft_ultimate_div_mod(int *a, int *b)
 {
-	int	numerator;
-	int	denumerator;
-	int	*quotient;
-	int	*remainder;
+	int	*num;
+	int	*den;
+	int	temp;
 
-	numerator = a;
-	denumerator = b;
-	quotient = div;
-	remainder = mod;
-	*quotient = numerator / denumerator;
-	*remainder = numerator % denumerator;
+	num = a;
+	den = b;
+	temp = *num;
+	*num = *a / *den;
+	*b = temp % *den;
 }
