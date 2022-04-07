@@ -1,32 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_rev_int_tab.c                                   :+:      :+:    :+:   */
+/*   ft_sort_int_tab.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: erhenriq <erhenriq@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/07 03:26:30 by erhenriq          #+#    #+#             */
-/*   Updated: 2022/04/07 17:01:30 by erhenriq         ###   ########.fr       */
+/*   Created: 2022/04/07 16:59:46 by erhenriq          #+#    #+#             */
+/*   Updated: 2022/04/07 18:49:25 by erhenriq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_rev_int_tab(int *tab, int size)
+void	swap(int *a, int *b)
 {
-	int	*point_end;
-	int	*point_start;
 	int	temp;
+
+	temp = *a;
+	*a = *b;
+	*b = temp;
+}
+
+void	ft_sort_int_tab(int *tab, int size)
+{
 	int	i;
 
-	point_start = tab;
-	point_end = tab + size - 1;
 	i = 0;
-	while (i < size / 2)
+	if (size < 1)
+		return ;
+	while (i < size)
 	{
-		temp = *point_start;
-		*point_start = *point_end;
-		*point_end = temp;
-		point_start++;
-		point_end--;
+		if (tab[i] > tab[i + 1])
+			swap(&tab[i], &tab[i + 1]);
 		i++;
 	}
+	ft_sort_int_tab(tab, size - 1);
 }

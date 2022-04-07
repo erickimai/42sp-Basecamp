@@ -7,7 +7,7 @@ int	main (void)
 {
 	int	n;
 
-	n = 9;
+	n = 1;
 	ft_print_combn(n);
 	return (0);
 }
