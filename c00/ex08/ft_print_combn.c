@@ -5,45 +5,48 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: erhenriq <erhenriq@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/04 23:36:02 by erhenriq          #+#    #+#             */
-/*   Updated: 2022/04/06 23:45:29 by erhenriq         ###   ########.fr       */
+/*   Created: 2022/04/07 00:30:45 by erhenriq          #+#    #+#             */
+/*   Updated: 2022/04/07 04:27:09 by erhenriq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_buildArray(int n);
-void	ft_writeArray(int array[], int n, int endWrite);
-void	ft_iterateArray(int n, int array[]);
+void	ft_build_array(int n);
+void	ft_write_array(int array[], int n, int end_write);
+void	ft_iterate_array(int n, int array[]);
 
-void	ft_iterateArray(int n, int array[])
+void	ft_iterate_array(int n, int array[])
 {
 	int	iterator;
-	int endWrite;
+	int	end_write;
 
-	endWrite = 0;
+	end_write = 0;
 	iterator = n - 1;
 	while (iterator >= 0)
 	{
 		if (array[iterator] < array[iterator + 1] - 1)
 		{
 			array[iterator]++;
-				if(iterator != n - 1)
-					array[iterator + 1] = array[iterator] + 1;
+			while (iterator != n - 1)
+			{
+				array[iterator + 1] = array[iterator] + 1;
+				iterator++;
+			}
 			iterator = n - 1;
 			if (array[0] == 10 - n)
-				endWrite = 1;
-			ft_writeArray(array, n, endWrite);
+				end_write = 1;
+			ft_write_array(array, n, end_write);
 		}
 		else
 			iterator--;
 	}
 }
 
-void	ft_buildArray(int n)
+void	ft_build_array(int n)
 {
 	int	i;
-	int	array[n];
+	int	array[11];
 
 	array[0] = 0;
 	array[n] = 10;
@@ -53,27 +56,27 @@ void	ft_buildArray(int n)
 		array[i] = array[i - 1] + 1;
 		i++;
 	}
-	ft_writeArray(array, n, 0);
-	ft_iterateArray(n, array);
+	ft_write_array(array, n, 0);
+	ft_iterate_array(n, array);
 }
 
-void	ft_writeArray(int array[], int n, int endWrite)
+void	ft_write_array(int array[], int n, int end_write)
 {
-	int	i;
-	char convertToChar;
+	int		i;
+	char	convert_to_char;
 
 	i = 0;
 	while (i < n)
 	{
-		convertToChar = array[i] + 48;
-		write(1, &convertToChar, 1);
+		convert_to_char = array[i] + 48;
+		write(1, &convert_to_char, 1);
 		i++;
 	}
-	if (endWrite == 0)
+	if (end_write == 0)
 		write(1, " ", 1);
 }
 
 void	ft_print_combn(int n)
 {
-	ft_buildArray(n);
+	ft_build_array(n);
 }

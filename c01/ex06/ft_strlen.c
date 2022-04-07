@@ -1,22 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: erhenriq <erhenriq@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/06 02:05:31 by erhenriq          #+#    #+#             */
-/*   Updated: 2022/04/07 01:52:38 by erhenriq         ###   ########.fr       */
+/*   Created: 2022/04/07 02:42:09 by erhenriq          #+#    #+#             */
+/*   Updated: 2022/04/07 03:08:29 by erhenriq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putstr(char *c)
+int	ft_strlen(char	*str)
 {
-	while (*c != '\0')
+	int	i;
+
+	i = 0;
+	while (*str != '\0')
 	{
-		write(1, c, 1);
-		c++;
+		i++;
+		str++;
 	}
+	return (i);
 }
