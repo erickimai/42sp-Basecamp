@@ -1,21 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ft.c                                            :+:      :+:    :+:   */
+/*   ft_strupcase.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: erhenriq <erhenriq@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/05 03:25:00 by erhenriq          #+#    #+#             */
-/*   Updated: 2022/04/09 14:27:08 by erhenriq         ###   ########.fr       */
+/*   Created: 2022/04/09 06:28:41 by erhenriq          #+#    #+#             */
+/*   Updated: 2022/04/09 16:38:46 by erhenriq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//	Function that has a pointer to int in parameter and give int the
-//	value of 42
-void	ft_ft(int *nbr)
+//	Converts everything to uppercase
+int	ft_str_is_lowercase(char *str)
 {
-	int	*p;
+	int	is_low;
+	int	i;
 
-	p = &*nbr;
-	*p = 42;
+	is_low = 0;
+	i = 0;
+	while (str[i] != '\0')
+	{
+		if (str[i] >= 'a' && str[i] <= 'z')
+			is_low = 1;
+		i++;
+	}
+	return (is_low);
+}
+
+char	*ft_strupcase(char *str)
+{
+	int		i;
+	char	c;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		c = str[i];
+		if (ft_str_is_lowercase(&c) == 1)
+			str[i] -= 32;
+		i++;
+	}
+	return (str);
 }

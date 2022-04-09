@@ -6,12 +6,14 @@
 /*   By: erhenriq <erhenriq@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 06:30:59 by erhenriq          #+#    #+#             */
-/*   Updated: 2022/04/04 17:41:25 by erhenriq         ###   ########.fr       */
+/*   Updated: 2022/04/07 21:14:54 by erhenriq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
+//	Show, all different combinations of three different
+//	numbers in ascending order
 void	ft_print_comb(void)
 {
 	int	i;

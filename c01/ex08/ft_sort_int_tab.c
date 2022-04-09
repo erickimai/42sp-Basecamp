@@ -6,7 +6,7 @@
 /*   By: erhenriq <erhenriq@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/07 16:59:46 by erhenriq          #+#    #+#             */
-/*   Updated: 2022/04/07 18:49:25 by erhenriq         ###   ########.fr       */
+/*   Updated: 2022/04/09 15:01:34 by erhenriq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ void	swap(int *a, int *b)
 	*b = temp;
 }
 
+//	Sort an array of integers in ascending order
 void	ft_sort_int_tab(int *tab, int size)
 {
 	int	i;

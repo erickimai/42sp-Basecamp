@@ -6,7 +6,7 @@
 /*   By: erhenriq <erhenriq@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 17:25:38 by erhenriq          #+#    #+#             */
-/*   Updated: 2022/04/04 20:03:34 by erhenriq         ###   ########.fr       */
+/*   Updated: 2022/04/07 21:19:31 by erhenriq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ void	ft_putchar2(int first_nbr, int second_nbr)
 	}
 }
 
+//	Show all different combinations of two numbers
+//	between 0 and 99, in ascending order
 void	ft_print_comb2(void)
 {
 	int	first_nbr;

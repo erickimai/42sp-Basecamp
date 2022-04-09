@@ -6,7 +6,7 @@
 /*   By: erhenriq <erhenriq@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/07 00:30:45 by erhenriq          #+#    #+#             */
-/*   Updated: 2022/04/07 04:27:09 by erhenriq         ###   ########.fr       */
+/*   Updated: 2022/04/08 04:33:41 by erhenriq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ void	ft_build_array(int n);
 void	ft_write_array(int array[], int n, int end_write);
 void	ft_iterate_array(int n, int array[]);
 
+//	Iterates array backwards
 void	ft_iterate_array(int n, int array[])
 {
 	int	iterator;
@@ -60,6 +61,7 @@ void	ft_build_array(int n)
 	ft_iterate_array(n, array);
 }
 
+//	Print an array on stdout
 void	ft_write_array(int array[], int n, int end_write)
 {
 	int		i;
@@ -73,9 +75,11 @@ void	ft_write_array(int array[], int n, int end_write)
 		i++;
 	}
 	if (end_write == 0)
-		write(1, " ", 1);
+		write(1, ", ", 2);
 }
 
+//	Show all different combinations of n numbers in
+//	ascending order.
 void	ft_print_combn(int n)
 {
 	ft_build_array(n);

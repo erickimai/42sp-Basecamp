@@ -6,10 +6,11 @@
 /*   By: erhenriq <erhenriq@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/07 03:26:30 by erhenriq          #+#    #+#             */
-/*   Updated: 2022/04/07 17:01:30 by erhenriq         ###   ########.fr       */
+/*   Updated: 2022/04/09 15:00:39 by erhenriq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+//	Reverts the order of elements of an array of integers
 void	ft_rev_int_tab(int *tab, int size)
 {
 	int	*point_end;

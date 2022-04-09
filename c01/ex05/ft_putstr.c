@@ -6,12 +6,13 @@
 /*   By: erhenriq <erhenriq@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 02:05:31 by erhenriq          #+#    #+#             */
-/*   Updated: 2022/04/07 01:52:38 by erhenriq         ###   ########.fr       */
+/*   Updated: 2022/04/09 14:57:55 by erhenriq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
+//	Shows one by one the characters of a string on the screen.
 void	ft_putstr(char *c)
 {
 	while (*c != '\0')

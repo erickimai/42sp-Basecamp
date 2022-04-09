@@ -1,21 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ft.c                                            :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: erhenriq <erhenriq@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/05 03:25:00 by erhenriq          #+#    #+#             */
-/*   Updated: 2022/04/09 14:27:08 by erhenriq         ###   ########.fr       */
+/*   Created: 2022/04/08 01:13:37 by erhenriq          #+#    #+#             */
+/*   Updated: 2022/04/09 16:14:13 by erhenriq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//	Function that has a pointer to int in parameter and give int the
-//	value of 42
-void	ft_ft(int *nbr)
+//	Replicates strncpy
+char	*ft_strncpy(char	*dest, char	*src, unsigned int n)
 {
-	int	*p;
+	unsigned	int	i;
 
-	p = &*nbr;
-	*p = 42;
+	i = 0;
+	while (src[i] != '\0' && i < n)
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+	while (i < n)
+	{
+		dest[i] = '\0';
+		i++;
+	}
+	return (dest);
 }

@@ -6,12 +6,18 @@
 /*   By: erhenriq <erhenriq@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 21:57:50 by erhenriq          #+#    #+#             */
-/*   Updated: 2022/04/04 23:30:59 by erhenriq         ###   ########.fr       */
+/*   Updated: 2022/04/08 04:26:15 by erhenriq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
+
+//	Returns the size of number
 int	ft_countdgt(int nbr)
 {
 	int	temp;
@@ -27,6 +33,7 @@ int	ft_countdgt(int nbr)
 	return (div);
 }
 
+//	Checks if number is positive or negative
 int	ft_checksign(int nbr)
 {
 	int	nb;
@@ -40,14 +47,20 @@ int	ft_checksign(int nbr)
 	return (nb);
 }
 
+//	Writes number passed as parameter
 void	ft_putnbr(int nb)
 {
 	int	nbr;
 	int	print_dgt;
 	int	div;
 
-	nbr = nb;
-	nbr = ft_checksign(nbr);
+	if (nb == -2147483648)
+	{
+		ft_putchar('-');
+		ft_putchar('2');
+		nb = 147483648;
+	}
+	nbr = ft_checksign(nb);
 	div = ft_countdgt(nbr);
 	while (div > 0)
 	{
