@@ -36,6 +36,7 @@ Soft-skills
 	common work methodology that allows all team members to contribute to the project.
 
 EVALUATED BY MOULINETTE.
+
 SHELL00:
 ex00: OK | ex01: OK | ex02: OK | ex03: OK | ex04: OK | ex05: OK | ex06: OK | ex07: OK | ex08: OK
 
