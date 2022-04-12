@@ -6,14 +6,14 @@
 /*   By: erhenriq <erhenriq@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/09 03:38:30 by erhenriq          #+#    #+#             */
-/*   Updated: 2022/04/09 16:38:18 by erhenriq         ###   ########.fr       */
+/*   Updated: 2022/04/10 14:07:49 by erhenriq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*	Return 1 if the string passed as a parameter contains only
-	printable characters and return 0 if the function contains other
- 	types of characters. */
- int	ft_str_is_printable(char	*str)
+//	Return 1 if the string passed as a parameter contains only
+//	printable characters and return 0 if the function contains other
+//	types of characters. */
+int	ft_str_is_printable(char *str)
 {
 	int	is_print;
 	int	i;

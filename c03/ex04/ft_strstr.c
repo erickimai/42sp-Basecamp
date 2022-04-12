@@ -1,44 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlowcase.c                                    :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: erhenriq <erhenriq@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/09 16:38:52 by erhenriq          #+#    #+#             */
-/*   Updated: 2022/04/10 03:19:09 by erhenriq         ###   ########.fr       */
+/*   Created: 2022/04/12 06:30:13 by erhenriq          #+#    #+#             */
+/*   Updated: 2022/04/12 06:30:21 by erhenriq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//	Converts everything to lowercase
-int	ft_str_is_uppercase(char *str)
+char *ft_strstr(char *str, char *to_find)
 {
-	int	is_upper;
-	int	i;
-
-	is_upper = 0;
-	i = 0;
-	while (str[i] != '\0')
-	{
-		if (str[i] >= 'A' && str[i] <= 'Z')
-			is_upper = 1;
-		i++;
-	}
-	return (is_upper);
-}
-
-char	*ft_strlowcase(char *str)
-{
-	int		i;
-	char	c;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		c = str[i];
-		if (ft_str_is_uppercase(&c))
-			str[i] += 32;
-		i++;
-	}
-	return (str);
+	
 }

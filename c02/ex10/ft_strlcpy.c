@@ -1,44 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlowcase.c                                    :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: erhenriq <erhenriq@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/09 16:38:52 by erhenriq          #+#    #+#             */
-/*   Updated: 2022/04/10 03:19:09 by erhenriq         ###   ########.fr       */
+/*   Created: 2022/04/10 14:09:20 by erhenriq          #+#    #+#             */
+/*   Updated: 2022/04/11 04:58:01 by erhenriq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//	Converts everything to lowercase
-int	ft_str_is_uppercase(char *str)
+unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 {
-	int	is_upper;
-	int	i;
-
-	is_upper = 0;
-	i = 0;
-	while (str[i] != '\0')
-	{
-		if (str[i] >= 'A' && str[i] <= 'Z')
-			is_upper = 1;
-		i++;
-	}
-	return (is_upper);
-}
-
-char	*ft_strlowcase(char *str)
-{
-	int		i;
-	char	c;
+	unsigned int	i;
 
 	i = 0;
-	while (str[i] != '\0')
+	while (src[i] != '\0' && i < size)
 	{
-		c = str[i];
-		if (ft_str_is_uppercase(&c))
-			str[i] += 32;
+		dest[i] = src[i];
 		i++;
 	}
-	return (str);
+	dest[i] = '\0';
+	while (src[i] != '\0')
+		i++;
+	return (i);
 }
