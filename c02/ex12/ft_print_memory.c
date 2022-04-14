@@ -6,7 +6,7 @@
 /*   By: erhenriq <erhenriq@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 05:36:37 by erhenriq          #+#    #+#             */
-/*   Updated: 2022/04/12 01:22:07 by erhenriq         ###   ########.fr       */
+/*   Updated: 2022/04/14 02:10:30 by erhenriq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ void	ft_content_to_hexa(char *addr)
 	int	i;
 
 	i = 0;
-	while (addr[i] != '\0' && i < 16)
+	while (i < 16)
 	{
 		ft_putchar(addr[i] / 16 + 48);
 		if (addr[i] % 16 < 10)
@@ -71,7 +71,10 @@ void	ft_content_to_hexa(char *addr)
 		else
 			ft_putchar(addr[i] % 16 + 87);
 		if (addr[i + 1] == '\0')
-			break ;
+		{
+			write(1, (void *)"     ", 5);
+			break;
+		}
 		else
 		{
 			ft_putchar(addr[i + 1] / 16 + 48);
