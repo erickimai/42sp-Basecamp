@@ -6,106 +6,86 @@
 /*   By: erhenriq <erhenriq@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 16:40:45 by erhenriq          #+#    #+#             */
-/*   Updated: 2022/04/13 22:33:47 by erhenriq         ###   ########.fr       */
+/*   Updated: 2022/04/16 04:23:31 by erhenriq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <limits.h>
-#include <stdio.h>
 
-int	ft_strlen(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (*str++)
-		i++;
-	return (i);
-}
-
+//	Checks if the base is a valid base and returns its lenght
 int	ft_check_validity(char *base)
 {
 	int		i;
 	int		j;
-	char	c;
 
 	if (base[0] == '\0' || base[1] == '\0')
 		return (0);
 	i = 0;
-	c = base[1];
 	while (base[i] != '\0')
 	{
 		if (base[i] == '+' || base[i] == '-')
 			return (0);
 		j = i + 1;
-		while (c != '\0')
+		while (base[j] != '\0')
 		{
-			c = base[j];
-			if (c == base[i])
+			if (base[j] == base[i])
 				return (0);
 			j++;
 		}
 		i++;
 	}
-	return (1);
+	return (i);
 }
 
-int	ft_atoi(char *str)
+// Checks if a character is in the base returning 1 if true
+int	ft_in_base(char c, char *base)
 {
-	int		count_neg;
-	int		nbr;
+	int	i;
 
-	while (*str == 32 || (*str >= 9 && *str <= 13))
-		str++;
-	count_neg = 0;
-	while (*str == 43 || *str == 45)
+	i = 0;
+	while (base[i] != '\0')
 	{
-		if (*str == 45)
+		if (base[i] == c)
+			return (i);
+		i++;
+	}
+	return (-1);
+}
+
+//	Converts any string into an integer like normal atoi funcion
+int	ft_atoi(char *str, char *base, int bsize)
+{
+	int	count_neg;
+	int	i;
+	int	nbr;
+
+	i = 0;
+	while (str[i] == 32 || (str[i] >= 9 && str[i] <= 13))
+		i++;
+	count_neg = 0;
+	while (str[i] == 43 || str[i] == 45)
+	{
+		if (str[i] == 45)
 			count_neg++;
-		str++;
+		i++;
 	}
 	nbr = 0;
-	while (*str >= '0' && *str <= '9')
+	while (ft_in_base(str[i], base) != -1)
 	{
-		nbr = (nbr * 10) + (*str - 48);
-		str++;
+		nbr = (nbr * bsize) + ft_in_base(str[i], base);
+		i++;
 	}
 	if (count_neg % 2)
 		nbr *= -1;
 	return (nbr);
 }
 
-int	ft_convert_base(long int nbr, char *base, int bsize)
-{
-	if (nbr >= bsize)
-	{
-		ft_convert_base(nbr / bsize, base, bsize);
-		ft_convert_base(nbr % bsize, base, bsize);
-	}
-	else
-		write (1, &base[nbr], 1);
-}
-
 int	ft_atoi_base(char *str, char *base)
 {
 	int	base_size;
-	int	atoi_number;
 
-	if (ft_check_validity(base) == 0)
+	base_size = ft_check_validity(base);
+	if (base_size <= 1)
 		return (0);
-	base_size = ft_strlen(base);
-	atoi_number = ft_atoi(str);
-	if (atoi_number < 0)
-	{
-		write(1, "-", 1);
-		atoi_number *= -1;
-	}
-	if (atoi_number == INT_MIN)
-	{
-		ft_convert_base(-((long int) INT_MIN), base, base_size);
-		return (1);
-	}
-	ft_convert_base(atoi_number, base, base_size);
-	return (1);
+	return(ft_atoi(str, base, base_size));
 }

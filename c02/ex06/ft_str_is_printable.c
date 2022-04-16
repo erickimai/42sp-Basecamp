@@ -6,7 +6,7 @@
 /*   By: erhenriq <erhenriq@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/09 03:38:30 by erhenriq          #+#    #+#             */
-/*   Updated: 2022/04/10 14:07:49 by erhenriq         ###   ########.fr       */
+/*   Updated: 2022/04/14 05:44:20 by erhenriq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	ft_str_is_printable(char *str)
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if (str[i] < 32 || str[i] > 126)
+		if (str[i] < 32 || str[i] >= 127)
 			is_print = 0;
 		i++;
 	}

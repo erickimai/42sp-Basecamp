@@ -1,37 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_iterative_power.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: erhenriq <erhenriq@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/12 22:38:49 by erhenriq          #+#    #+#             */
-/*   Updated: 2022/04/16 04:18:08 by erhenriq         ###   ########.fr       */
+/*   Created: 2022/04/14 22:49:23 by erhenriq          #+#    #+#             */
+/*   Updated: 2022/04/14 22:56:31 by erhenriq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(char *str)
+int ft_iterative_power(int nb, int power)
 {
-	int	count_neg;
-	int	nbr;
+	int	result;
 
-	while (*str == ' ' || *str == '\n' || *str == '\r' || *str == '\t'
-			|| *str == '\f' || *str == '\v')
-		str++;
-	count_neg = 0;
-	while (*str == '+' || *str == '-')
+	if (power < 0)
+		return (0);
+	else if (power == 0)
+		return (1);
+	else
 	{
-		if (*str == '-')
-			count_neg++;
-		str++;
+		result = nb;
+		while (power > 1)
+		{
+			result = result * nb;
+			power--;
+		}
+		if (nb < 0 && power % 2 == 1)
+			nb *= -1;
+		return (result);
 	}
-	nbr = 0;
-	while (*str >= '0' && *str <= '9')
-	{
-		nbr = (nbr * 10) + (*str - 48);
-		str++;
-	}
-	if (count_neg % 2)
-		nbr *= -1;
-	return (nbr);
 }

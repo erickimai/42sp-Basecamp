@@ -4,11 +4,11 @@ char	*ft_strcapitalize(char *str);
 
 int	main(void)
 {
-	char str1[] = "alo maluco 42beleza!";
+	char str1[] = "aefeaf";
 	char str2[] = "ALO MALUCO 42BELEZA!";
-	char str3[] = "alo+ma|uco a2beleza!";
-	char str4[] = "ALO+MALUCO*a2BELEZA!";
-	char str5[] = "^uIv#= =9Hf~2y@F3A)FTzBgF";
+	char str3[] = "  ,alo+ma|uco a2beleza!";
+	char str4[] = "-Q_@$XO=2fGQ239;0l((V9G{AmM]QEp3q";
+	char str5[] = "MiD-60i/O$Yrkr@@D#Utgw$";
 	char str6[] = "tsR1|vn_WE}7X6{Vm2vQf(rG}qdnT`1,qH+n";
 
 	printf("str1: %s\n", str1);

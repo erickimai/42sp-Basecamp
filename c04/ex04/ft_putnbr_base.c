@@ -6,7 +6,7 @@
 /*   By: erhenriq <erhenriq@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 02:15:29 by erhenriq          #+#    #+#             */
-/*   Updated: 2022/04/13 16:48:02 by erhenriq         ###   ########.fr       */
+/*   Updated: 2022/04/14 20:35:05 by erhenriq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,21 +32,18 @@ int	ft_check_validity(char *base)
 {
 	int		i;
 	int		j;
-	char	c;
 
 	if (base[0] == '\0' || base[1] == '\0')
 		return (1);
 	i = 0;
-	c = base[1];
 	while (base[i] != '\0')
 	{
 		if (base[i] == '+' || base[i] == '-')
 			return (1);
 		j = i + 1;
-		while (c != '\0')
+		while (base[j] != '\0')
 		{
-			c = base[j];
-			if (c == base[i])
+			if (base[j] == base[i])
 				return (1);
 			j++;
 		}
