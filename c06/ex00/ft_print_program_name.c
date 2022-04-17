@@ -1,33 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_power.c                               :+:      :+:    :+:   */
+/*   ft_print_program_name.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: erhenriq <erhenriq@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/14 22:49:23 by erhenriq          #+#    #+#             */
-/*   Updated: 2022/04/16 05:01:37 by erhenriq         ###   ########.fr       */
+/*   Created: 2022/04/17 05:55:44 by erhenriq          #+#    #+#             */
+/*   Updated: 2022/04/17 06:08:26 by erhenriq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_iterative_power(int nb, int power)
-{
-	int	result;
+#include <unistd.h>
 
-	if (power < 0)
-		return (0);
-	else if (power == 0)
-		return (1);
-	else
+int	main(int argc, char *argv[])
+{
+	int	i;
+
+	i = 0;
+	while (argv[0][i])
 	{
-		result = nb;
-		while (power > 1)
-		{
-			result = result * nb;
-			power--;
-		}
-		if (nb < 0 && power % 2 == 1)
-			nb *= -1;
-		return (result);
+		write(1, &argv[0][i], 1);
+		i++;
 	}
+	write(1, "\n", 1);
+	return (argc);
 }

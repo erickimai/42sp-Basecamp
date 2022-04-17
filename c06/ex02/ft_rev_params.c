@@ -1,33 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_power.c                               :+:      :+:    :+:   */
+/*   ft_rev_params.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: erhenriq <erhenriq@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/14 22:49:23 by erhenriq          #+#    #+#             */
-/*   Updated: 2022/04/16 05:01:37 by erhenriq         ###   ########.fr       */
+/*   Created: 2022/04/17 06:09:06 by erhenriq          #+#    #+#             */
+/*   Updated: 2022/04/17 06:11:11 by erhenriq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_iterative_power(int nb, int power)
-{
-	int	result;
+#include <unistd.h>
 
-	if (power < 0)
-		return (0);
-	else if (power == 0)
-		return (1);
-	else
+int	main(int argc, char *argv[])
+{
+	int	i;
+	int	j;
+
+	j = argc - 1;
+	while (j > 0)
 	{
-		result = nb;
-		while (power > 1)
+		i = 0;
+		while (argv[j][i])
 		{
-			result = result * nb;
-			power--;
+			write(1, &argv[j][i], 1);
+			i++;
 		}
-		if (nb < 0 && power % 2 == 1)
-			nb *= -1;
-		return (result);
+		j--;
+		write(1, "\n", 1);
 	}
+	return (0);
 }

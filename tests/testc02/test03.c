@@ -14,7 +14,7 @@ int	main(void)
 	str2 = calloc(11, sizeof(char));
 	str3 = calloc(11, sizeof(char));
 	str4 = calloc(11, sizeof(char));
-	str1 = "";
+	str1 = "0124314314";
 	str2 = "a123456789";
 	str3 = "0123:56789";
 	str4 = "012345678/";

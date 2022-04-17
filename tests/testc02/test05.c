@@ -6,7 +6,7 @@
 /*   By: erhenriq <erhenriq@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/09 03:37:00 by erhenriq          #+#    #+#             */
-/*   Updated: 2022/04/09 03:38:02 by erhenriq         ###   ########.fr       */
+/*   Updated: 2022/04/16 06:06:11 by erhenriq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	main(void)
 	str2 = calloc(10, sizeof(char));
 	str3 = calloc(10, sizeof(char));
 	str4 = calloc(10, sizeof(char));
-	str1 = "ABCDEFGHI";
+	str1 = "ABCDEFEA";
 	str2 = "0BCDEFGHI";
 	str3 = "ABCDeFGHI";
 	str4 = "ABCDEFGH:";

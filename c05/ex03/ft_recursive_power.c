@@ -6,11 +6,11 @@
 /*   By: erhenriq <erhenriq@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 22:57:25 by erhenriq          #+#    #+#             */
-/*   Updated: 2022/04/14 23:01:43 by erhenriq         ###   ########.fr       */
+/*   Updated: 2022/04/16 05:01:45 by erhenriq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_recursive_power(int nb, int power)
+int	ft_recursive_power(int nb, int power)
 {
 	if (power < 0)
 		return (0);

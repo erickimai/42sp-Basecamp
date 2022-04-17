@@ -6,11 +6,11 @@
 /*   By: erhenriq <erhenriq@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 22:40:45 by erhenriq          #+#    #+#             */
-/*   Updated: 2022/04/14 22:41:03 by erhenriq         ###   ########.fr       */
+/*   Updated: 2022/04/16 05:01:34 by erhenriq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_recursive_factorial(int nb)
+int	ft_recursive_factorial(int nb)
 {
 	if (nb < 0)
 		return (0);

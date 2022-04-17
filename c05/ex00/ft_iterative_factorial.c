@@ -6,11 +6,11 @@
 /*   By: erhenriq <erhenriq@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 22:35:36 by erhenriq          #+#    #+#             */
-/*   Updated: 2022/04/14 22:48:10 by erhenriq         ###   ########.fr       */
+/*   Updated: 2022/04/16 05:01:30 by erhenriq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_iterative_factorial(int nb)
+int	ft_iterative_factorial(int nb)
 {
 	int	result;
 

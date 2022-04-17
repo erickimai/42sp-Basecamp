@@ -14,7 +14,7 @@ int	main(void)
 		printf ("%d, ", res);
 		index++;
 	}*/
-	res = ft_fibonacci(3);
+	res = ft_fibonacci(4);
 	printf ("%d\n", res);
 	return (0);
 }

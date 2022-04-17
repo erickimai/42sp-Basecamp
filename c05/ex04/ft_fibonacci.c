@@ -6,11 +6,11 @@
 /*   By: erhenriq <erhenriq@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 23:02:49 by erhenriq          #+#    #+#             */
-/*   Updated: 2022/04/14 23:20:10 by erhenriq         ###   ########.fr       */
+/*   Updated: 2022/04/16 05:01:48 by erhenriq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_fibonacci(int index)
+int	ft_fibonacci(int index)
 {
 	if (index < 0)
 		return (-1);

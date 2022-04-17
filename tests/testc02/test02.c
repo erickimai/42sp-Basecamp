@@ -14,7 +14,7 @@ int	main(void)
 	str2 = calloc(10, sizeof(char));
 	str3 = calloc(10, sizeof(char));
 	str4 = calloc(10, sizeof(char));
-	str1 = "";
+	str1 = "afgnsaefz";
 	str2 = "abCde2gHi";
 	str3 = "2bCde2gHi";
 	str4 = "abCde2gH2";
