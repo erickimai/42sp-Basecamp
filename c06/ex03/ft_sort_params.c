@@ -6,26 +6,21 @@
 /*   By: erhenriq <erhenriq@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/17 14:37:38 by erhenriq          #+#    #+#             */
-/*   Updated: 2022/04/17 16:36:28 by erhenriq         ###   ########.fr       */
+/*   Updated: 2022/04/18 17:42:07 by erhenriq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int	ft_strcmp(char *s1, char *s2);
+void	ft_sort(char *argv[], int n);
+int		ft_strcmp(char *s1, char *s2);
+void	ft_swap(char *v[], int i, int j);
+void	ft_print(char *argv[], int argc);
 
-int	main (int argc, char *argv[])
+int	main(int argc, char *argv[])
 {
-	int	i;
-
-	i = 1;
-	while (i < argc)
-	{
-		if (ft_strcmp(*argv[]))
-	}
-
-
-
+	ft_sort(argv, argc);
+	ft_print(argv, argc);
 	return (0);
 }
 
@@ -49,19 +44,46 @@ int	ft_strcmp(char *s1, char *s2)
 	return (0);
 }
 
-void	ft_swap(int *a, int *b)
+void	ft_swap(char *v[], int i, int j)
 {
-	int temp;
+	char	*temp;
 
-	temp = *a;
-	*a = *b;
-	*b = temp;
+	temp = v[i];
+	v[i] = v[j];
+	v[j] = temp;
 }
-void	ft_sort(int *v, int n){
-	if (n < 1)return;
 
-	for (int i=0; i<n; i++)
-		if (v[i] > v[i+1])
-			ft_swap(&v[i], &v[i+1]);
-    ft_sort(v, n-1);
+void	ft_sort(char *argv[], int n)
+{
+	int	i;
+
+	if (n < 1)
+		return ;
+	i = 1;
+	while (i < n - 1)
+	{
+		if (ft_strcmp(argv[i], argv[i + 1]) > 0)
+			ft_swap(argv, i, i + 1);
+		i++;
+	}
+	ft_sort(argv, n - 1);
+}
+
+void	ft_print(char *argv[], int argc)
+{
+	int	i;
+	int	j;
+
+	j = 1;
+	while (j < argc)
+	{
+		i = 0;
+		while (argv[j][i])
+		{
+			write(1, &argv[j][i], 1);
+			i++;
+		}
+		j++;
+		write(1, "\n", 1);
+	}
 }

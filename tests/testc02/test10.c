@@ -18,7 +18,7 @@ int				main(void)
 	printf("dest: %s\n", dest);
 	printf("src_size: %d\n", src_size);
 	printf("last char: %d\n", dest[1]);
-	src_size = strlcpy(dest, src, 1);
+	src_size = ft_strlcpy(dest, src, 1);
 	printf("src_size: %d\n", src_size);
 	return(0);
 }

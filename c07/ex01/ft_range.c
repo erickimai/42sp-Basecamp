@@ -1,27 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_program_name.c                            :+:      :+:    :+:   */
+/*   ft_range.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: erhenriq <erhenriq@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/17 05:55:44 by erhenriq          #+#    #+#             */
-/*   Updated: 2022/04/19 01:06:59 by erhenriq         ###   ########.fr       */
+/*   Created: 2022/04/18 21:42:40 by erhenriq          #+#    #+#             */
+/*   Updated: 2022/04/18 22:55:47 by erhenriq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdlib.h>
 
-int	main(int argc, char *argv[])
+int	*ft_range(int min, int max)
 {
+	int	*elements;
 	int	i;
+	int	size;
 
+	if (min >= max)
+		return (NULL);
+	elements = malloc((max - min) * sizeof(int));
+	if (!elements)
+		return (NULL);
 	i = 0;
-	while (argv[argc - argc][i])
+	size = max - min;
+	while (i < size)
 	{
-		write(1, &argv[argc - argc][i], 1);
+		elements[i] = min;
 		i++;
+		min++;
 	}
-	write(1, "\n", 1);
-	return (0);
+	return (elements);
 }

@@ -1,27 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_program_name.c                            :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: erhenriq <erhenriq@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/17 05:55:44 by erhenriq          #+#    #+#             */
-/*   Updated: 2022/04/19 01:06:59 by erhenriq         ###   ########.fr       */
+/*   Created: 2022/04/18 21:43:09 by erhenriq          #+#    #+#             */
+/*   Updated: 2022/04/19 03:57:03 by erhenriq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-int	main(int argc, char *argv[])
+char *ft_strjoin(int size, char **strs, char *sep)
 {
-	int	i;
-
-	i = 0;
-	while (argv[argc - argc][i])
-	{
-		write(1, &argv[argc - argc][i], 1);
-		i++;
-	}
-	write(1, "\n", 1);
-	return (0);
+	
 }

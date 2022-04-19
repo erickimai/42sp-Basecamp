@@ -1,27 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_program_name.c                            :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: erhenriq <erhenriq@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/17 05:55:44 by erhenriq          #+#    #+#             */
-/*   Updated: 2022/04/19 01:06:59 by erhenriq         ###   ########.fr       */
+/*   Created: 2022/04/18 18:36:50 by erhenriq          #+#    #+#             */
+/*   Updated: 2022/04/18 22:54:42 by erhenriq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdlib.h>
 
-int	main(int argc, char *argv[])
+void	ft_strcpy(char	*dest, char	*src)
 {
-	int	i;
+	char	temp;
+	int		i;
 
 	i = 0;
-	while (argv[argc - argc][i])
+	temp = src[i];
+	while (temp != '\0')
 	{
-		write(1, &argv[argc - argc][i], 1);
+		temp = src[i];
+		dest[i] = temp;
 		i++;
 	}
-	write(1, "\n", 1);
-	return (0);
+	dest[i] = '\0';
+}
+
+unsigned int	ft_strlen(char *str)
+{
+	unsigned int	len;
+
+	len = 0;
+	while (*str++)
+		len++;
+	return (len);
+}
+
+char	*ft_strdup(char *src)
+{
+	char	*copy;
+
+	copy = malloc(ft_strlen(src));
+	if (!copy)
+		return (NULL);
+	ft_strcpy(copy, src);
+	return (copy);
 }
