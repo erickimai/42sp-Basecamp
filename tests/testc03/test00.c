@@ -10,7 +10,7 @@ int	main(void)
 	char *s2;
 	char *s3;
 	char *s4;
-	char s5[] = {'a', 'b', 'c', -1, -20, '\0'};
+	char s5[] = {'a', 'b', 'c', '2', 'a', '\0'};
 	char *s6;
 	char *s7;
 

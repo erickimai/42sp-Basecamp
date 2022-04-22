@@ -37,6 +37,9 @@ Soft-skills
 
 EVALUATED BY MOULINETTE.
 
+# EXAM00
+84/100
+
 # RUSH00:
 OK | 115%
 
@@ -53,6 +56,7 @@ ex00: OK | ex01: OK | ex02: OK | ex03: OK | ex04: OK | ex05: OK | ex06: OK | ex0
 ex00: OK | ex01: OK | ex02: OK | ex03: OK | ex04: OK | ex05: OK | ex06: OK | ex07: OK | ex08: OK | 100%
 
 # C02:
+ex00: OK | ex01: OK | ex02: OK | ex03: OK | ex04: OK | ex05: OK | ex06: OK | ex07: OK | ex08: OK | ex09: OK | ex10: OK | ex11: OK | ex12: KO | 75%
 
 # C03:
 ex00: OK | ex01: OK | ex02: OK | ex03: OK | ex04: OK | ex05: OK | 100%
@@ -62,3 +66,12 @@ ex00: OK | ex01: OK | ex02: OK | ex03: OK | ex04: OK | ex05: OK | 100%
 
 # C05:
 ex00: OK | ex01: OK | ex02: OK | ex03: OK | ex04: OK | ex05: OK | ex06: OK | ex07: OK | ex08: OK | 100%
+
+# C06:
+ex00: OK | ex01: OK | ex02: OK | ex03: OK | 100%
+
+# C07
+ex00: OK | ex01: KO | ex02: KO | ex03: KO | ex04: KO | ex05: Nothing turned in | 15%
+
+# C08
+ex00: OK | ex01: OK | ex02: OK | ex03: OK | ex04: OK | ex05: OK | 100%

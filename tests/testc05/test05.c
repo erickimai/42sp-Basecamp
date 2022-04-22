@@ -28,7 +28,7 @@ void	ft_sqrt_error_test()
 
 	int res;
 	int offset;
-	int test_nums[11] = {-10, -5, 0, 2, 3, 13, 27, 29, 50, 99, 2147483647};
+	int test_nums[11] = {-10, -5, 0, 2, 3, 13, 27, 29, 50, 99, 1640045925};
 
 	offset = 0;
 	while (offset < 11)

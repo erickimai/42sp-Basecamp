@@ -45,7 +45,7 @@ void	ft_is_prime_error_test()
 
 int		main(void)
 {
-	printf("[1] Testing prime numbers up to 59.\n");
+	printf("[1] Testing prime numbers up to INT_MAX.\n");
 	ft_is_prime_test();
 	printf("[2] Testing non-prime numbers up to 54.\n");
 	ft_is_prime_error_test();
