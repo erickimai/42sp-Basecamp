@@ -1,36 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_range.c                                         :+:      :+:    :+:   */
+/*   ft_abs.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: erhenriq <erhenriq@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/18 21:42:40 by erhenriq          #+#    #+#             */
-/*   Updated: 2022/04/19 17:35:40 by erhenriq         ###   ########.fr       */
+/*   Created: 2022/04/20 17:06:19 by erhenriq          #+#    #+#             */
+/*   Updated: 2022/04/20 17:40:31 by erhenriq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#ifndef FT_ABS_H
+# define FT_ABS_H
 
-//	Return all possible integers between (min, max)
-int	*ft_range(int min, int max)
-{
-	int	*elements;
-	int	i;
-	int	size;
+# define ABS(Value) (((Value) < 0) ? -(Value) : (Value))
 
-	if (min >= max)
-		return (NULL);
-	elements = malloc((max - min) * sizeof(int));
-	if (!elements)
-		return (NULL);
-	i = 0;
-	size = max - min;
-	while (i < size)
-	{
-		elements[i] = min;
-		i++;
-		min++;
-	}
-	return (elements);
-}
+#endif

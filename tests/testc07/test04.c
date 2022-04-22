@@ -5,7 +5,7 @@ char	*ft_convert_base(char *nbr, char *base_from, char *base_to);
 
 int		main(void)
 {
-	char nbr[] = "-+--2147483648";
+	char nbr[] = "+---2147483647";
 	char base_to[] = "0123456789ABCDEF";
 	char base_from[] = "0123456789";
 	char *res;

@@ -1,36 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_range.c                                         :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: erhenriq <erhenriq@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/18 21:42:40 by erhenriq          #+#    #+#             */
-/*   Updated: 2022/04/19 17:35:40 by erhenriq         ###   ########.fr       */
+/*   Created: 2022/04/20 22:11:20 by erhenriq          #+#    #+#             */
+/*   Updated: 2022/04/20 22:16:05 by erhenriq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-//	Return all possible integers between (min, max)
-int	*ft_range(int min, int max)
+#include "ft_point.h"
+#include <stdio.h>
+void	set_point(t_point *point)
 {
-	int	*elements;
-	int	i;
-	int	size;
+	point->x = 42;
+	point->y = 21;
+}
 
-	if (min >= max)
-		return (NULL);
-	elements = malloc((max - min) * sizeof(int));
-	if (!elements)
-		return (NULL);
-	i = 0;
-	size = max - min;
-	while (i < size)
-	{
-		elements[i] = min;
-		i++;
-		min++;
-	}
-	return (elements);
+int	main(void)
+{
+	t_point	point;
+
+	set_point(&point);
+	printf("x = %d, y = %d\n",point.x, point.y);
+	return (0);
 }

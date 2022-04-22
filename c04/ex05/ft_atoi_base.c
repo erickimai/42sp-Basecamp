@@ -6,7 +6,7 @@
 /*   By: erhenriq <erhenriq@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 16:40:45 by erhenriq          #+#    #+#             */
-/*   Updated: 2022/04/16 04:23:31 by erhenriq         ###   ########.fr       */
+/*   Updated: 2022/04/19 19:36:30 by erhenriq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ int	ft_atoi(char *str, char *base, int bsize)
 	int	nbr;
 
 	i = 0;
-	while (str[i] == 32 || (str[i] >= 9 && str[i] <= 13))
+	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
 		i++;
 	count_neg = 0;
 	while (str[i] == 43 || str[i] == 45)

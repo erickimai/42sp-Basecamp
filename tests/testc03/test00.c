@@ -26,7 +26,6 @@ int	main(void)
 	s4 = "ab0defghi";
 	s6 = "abcdefghi"; // s6 is the same of s1
 	s7 = "";
-	printf("%d", strcmp(s1, s5));
 	printf("s1: %s, s2: %s, s3: %s, s4: %s, s5: %s, s6: %s, s7: %s\n", s1, s2, s3, s4, s5, s6, s7);
 	printf("ft_strcmp(s2, s1)\t= %d\noriginal strcmp(s2, s1)\t= %d\n------------------------------\n", ft_strcmp(s2, s1), strcmp(s2, s1));
 	printf("ft_strcmp(s1, s3)\t= %d\noriginal strcmp(s1, s3)\t= %d\n------------------------------\n", ft_strcmp(s1, s3), strcmp(s1, s3));

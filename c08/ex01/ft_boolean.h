@@ -1,36 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_range.c                                         :+:      :+:    :+:   */
+/*   ft_boolean.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: erhenriq <erhenriq@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/18 21:42:40 by erhenriq          #+#    #+#             */
-/*   Updated: 2022/04/19 17:35:40 by erhenriq         ###   ########.fr       */
+/*   Created: 2022/04/20 01:52:23 by erhenriq          #+#    #+#             */
+/*   Updated: 2022/04/20 17:41:08 by erhenriq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#ifndef FT_BOOLEAN_H
+# define FT_BOOLEAN_H
 
-//	Return all possible integers between (min, max)
-int	*ft_range(int min, int max)
-{
-	int	*elements;
-	int	i;
-	int	size;
+# include <unistd.h>
+# include <stdbool.h>
 
-	if (min >= max)
-		return (NULL);
-	elements = malloc((max - min) * sizeof(int));
-	if (!elements)
-		return (NULL);
-	i = 0;
-	size = max - min;
-	while (i < size)
-	{
-		elements[i] = min;
-		i++;
-		min++;
-	}
-	return (elements);
-}
+# define TRUE true
+# define FALSE false
+# define SUCCESS 0
+# define EVEN_MSG "I have an even number of arguments.\n"
+# define ODD_MSG "I have an odd number of arguments.\n"
+# define EVEN(nbr) ((nbr) % 2)
+
+typedef bool	t_bool;
+
+void	ft_putstr(char *str);
+t_bool	ft_is_even(int nbr);
+
+#endif

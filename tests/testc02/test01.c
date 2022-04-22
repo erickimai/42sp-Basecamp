@@ -12,8 +12,8 @@ int		main(void)
 	char	*src;
 	int		size;
 
-	size = 16;
+	size = 5;
 	src = "Bonjour les chacaux";
-//	printf(".%s.\n\n", ft_strncpy(dest, src, size));
+	printf(".%s.\n\n", ft_strncpy(dest, src, size));
 	printf(".%s.\n\n", strncpy(dest, src, size));
 }

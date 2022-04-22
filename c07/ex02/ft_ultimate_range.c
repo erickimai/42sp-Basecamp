@@ -6,7 +6,7 @@
 /*   By: erhenriq <erhenriq@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/18 21:42:57 by erhenriq          #+#    #+#             */
-/*   Updated: 2022/04/19 02:26:08 by erhenriq         ###   ########.fr       */
+/*   Updated: 2022/04/19 17:42:04 by erhenriq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ int	ft_ultimate_range(int **range, int min, int max)
 	return (size);
 }
 
+//	Return all possible integers between (min, max)
 int	*ft_range(int min, int max)
 {
 	int	*elements;

@@ -6,7 +6,7 @@
 /*   By: erhenriq <erhenriq@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 04:57:00 by erhenriq          #+#    #+#             */
-/*   Updated: 2022/04/15 01:47:36 by erhenriq         ###   ########.fr       */
+/*   Updated: 2022/04/22 02:10:00 by erhenriq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,3 +46,4 @@ void	ft_putstr_non_printable(char *str)
 		i++;
 	}
 }
+

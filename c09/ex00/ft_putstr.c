@@ -1,36 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_range.c                                         :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: erhenriq <erhenriq@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/18 21:42:40 by erhenriq          #+#    #+#             */
-/*   Updated: 2022/04/19 17:35:40 by erhenriq         ###   ########.fr       */
+/*   Created: 2022/04/12 22:00:52 by erhenriq          #+#    #+#             */
+/*   Updated: 2022/04/12 22:05:23 by erhenriq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include <unistd.h>
 
-//	Return all possible integers between (min, max)
-int	*ft_range(int min, int max)
+void ft_putstr(char *str)
 {
-	int	*elements;
-	int	i;
-	int	size;
-
-	if (min >= max)
-		return (NULL);
-	elements = malloc((max - min) * sizeof(int));
-	if (!elements)
-		return (NULL);
-	i = 0;
-	size = max - min;
-	while (i < size)
+	while (*str)
 	{
-		elements[i] = min;
-		i++;
-		min++;
+		write(1, &*str, 1);
+		str++;
 	}
-	return (elements);
 }

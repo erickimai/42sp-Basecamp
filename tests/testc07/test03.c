@@ -15,7 +15,7 @@ int		main(void)
 	offset = 0;
 	while (offset < 3)
 	{
-		strs[offset] = "abc";
+		strs[offset] = "";
 		offset++;
 	}
 	res_str = ft_strjoin(3, strs, ", ");

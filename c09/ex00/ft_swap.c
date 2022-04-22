@@ -1,36 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_range.c                                         :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: erhenriq <erhenriq@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/18 21:42:40 by erhenriq          #+#    #+#             */
-/*   Updated: 2022/04/19 17:35:40 by erhenriq         ###   ########.fr       */
+/*   Created: 2022/04/05 16:00:11 by erhenriq          #+#    #+#             */
+/*   Updated: 2022/04/09 14:55:58 by erhenriq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-//	Return all possible integers between (min, max)
-int	*ft_range(int min, int max)
+/*	Swap the contents of two integers whose addresses are
+	given in parameters. */
+void	ft_swap(int	*a,	int*b)
 {
-	int	*elements;
-	int	i;
-	int	size;
+	int	*frst_addrs;
+	int	*sec_addrs;
+	int	temp;
 
-	if (min >= max)
-		return (NULL);
-	elements = malloc((max - min) * sizeof(int));
-	if (!elements)
-		return (NULL);
-	i = 0;
-	size = max - min;
-	while (i < size)
-	{
-		elements[i] = min;
-		i++;
-		min++;
-	}
-	return (elements);
+	frst_addrs = a;
+	sec_addrs = b;
+	temp = *frst_addrs;
+	*frst_addrs = *sec_addrs;
+	*sec_addrs = temp;
 }

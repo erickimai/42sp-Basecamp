@@ -6,7 +6,8 @@
 /*   By: erhenriq <erhenriq@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/18 21:43:35 by erhenriq          #+#    #+#             */
-/*   Updated: 2022/04/18 21:43:37 by erhenriq         ###   ########.fr       */
+/*   Updated: 2022/04/20 01:02:09 by erhenriq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+char	*ft_convert_base(char *nbr, char *base_from, char *base_to);
